@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="<?php bloginfo('template_url') ?>/script/script.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,12 +47,15 @@
         <a href="<?php bloginfo("url") ?>"><img src="<?php bloginfo("template_url") ?>/images/GiT_logo.png" alt="Givery Technology"></a>
       </h1>
       <div class="header__side">
-        <form class="header__search" method="get" action="<?php bloginfo('url'); ?>">
-          <input type="text" name="s">
-          <button><span class="glyphicon glyphicon-search"></span></button>
-        </form>
+        <nav id="naviopen" class="header__navi">
+          <span class="header__navi__bar"></span>
+          <span class="header__navi__bar"></span>
+          <span class="header__navi__bar"></span>
+        </nav>
       </div>
     </div>
   </header>
+
+  <?php get_sidebar(); ?>
 
   <div class="wrapper">

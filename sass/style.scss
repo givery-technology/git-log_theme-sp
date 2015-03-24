@@ -76,7 +76,74 @@ header{
     float: right;
     margin-right: 2%;
   }
+  &__navi{
+    @include box-sizing(border-box);
+    float: right;
+    width: 25px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+    @include transition(all 0.2s ease-in);
+    position: relative;
+    z-index: 4;
+    &__bar{
+      display: block;
+      margin: 0;
+      margin-top: 5px;
+      width: 26px;
+      height: 3px;
+      background-color: $black;
+      @include transition( all .3s ease-out );
+    }
+    &.active{
+      @include transform(rotate(-45deg));
+      span:nth-child(1){
+        @include transform(rotate(0deg) translateY(10.5px));
+      }
+      span:nth-child(2){
+        opacity: 0;
+      }
+      span:nth-child(3){
+        @include transform(rotate(-90deg) translateX(5px));
+      }
+    }
+  }
+}
+
+// Page Size
+.wrapper{
+  width: 100%;
+}
+
+// SideBar Style
+.sidebar{
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  @include transition(all 0.2s ease-in);
+  &__contents{
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  &__linklist{
+    width: 100%;
+    li{
+      margin-bottom: 10px;
+      a{
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: $textSizeL;
+        color: $white;
+        background-color: rgba(79, 128, 192, 0.8);
+      }
+    }
+  }
   &__search{
+    width: 100%;
     input{
       width: 80%;
       height: 40px;
@@ -101,76 +168,6 @@ header{
     }
   }
 }
-
-// Page Size
-.wrapper{
-  width: 100%;
-}
-
-// SideBar Style
-/* .sidebar{
-  &__contents{
-    margin-bottom: 30px;
-    padding: 10px;
-    border: solid 1px $gray;
-    h4{
-      font-size: $textSizeL;
-      text-align: center;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: solid 1px $gray;
-    }
-  }
-  &__list{
-    li{
-      list-style-position: inside;
-      list-style-type: none;
-    }
-    &--recommend{
-      li{
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: solid 1px $gray;
-        &:last-child{
-          border: none;
-        }
-        a{
-          display: inline-block;
-          transition: all 0.3s;
-          opacity: 1;
-          &:hover{
-            opacity: 0.7;
-          }
-          .thumbnail{
-            margin-bottom: 5px;
-            img{
-              width: 100%;
-              height: auto;
-            }
-          }
-          h5{
-            width: 100%;
-            word-break: break-all;
-            line-height: 120%;
-          }
-        }
-      }
-    }
-  }
-  &__banner{
-    a{
-      opacity: 1;
-      transition: all 0.3s;
-      &:hover{
-        opacity: 0.7;
-      }
-      img{
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-} */
 
 // Fotter Style
 .footer{

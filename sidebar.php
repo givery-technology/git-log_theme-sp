@@ -4,21 +4,18 @@
  */
 ?>
     <aside class="sidebar">
-      <section class="sidebar__contents">
-        <h4>GiTLog 人気記事</h4>
-        <?php if (have_posts()) : query_posts('posts_per_page=5&orderby=rand'); ?>
-        <ul class="sidebar__list sidebar__list--recommend">
-          <?php while (have_posts()) : the_post(); ?>
-          <li>
-            <a href="<?php the_permalink(); ?>">
-              <div class="thumbnail"><?php the_post_thumbnail(); ?></div>
-              <h5><?php the_title(); ?></h5>
-            </a>
-          </li>
-          <?php
-              endwhile;
-            endif;
-          ?>
+      <div class="sidebar__contents">
+        <form class="sidebar__search" method="get" action="<?php bloginfo('url'); ?>">
+          <input type="text" name="s">
+          <button><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+      </div>
+      <div class="sidebar__contents">
+        <ul class="sidebar__linklist">
+          <li><a href="<?php bloginfo('url') ?>">Home</a></li>
+          <li><a href="http://givery.co.jp/" target="_brank">会社情報</a></li>
+          <li><a href="https://www.wantedly.com/companies/givery_technology" target="_brank">GiTについて</a></li>
+          <li><a href="https://www.wantedly.com/companies/givery_technology/projects" target="_brank">採用情報</a></li>
         </ul>
-      </section>
+      </div>
     </aside>
