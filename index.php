@@ -51,30 +51,24 @@
           while (have_posts()) : the_post();
       ?>
       <article class="mainPosts__list">
-        <div class="mainPosts__left">
-          <?php the_post_thumbnail(); ?>
-        </div>
-        <div class="mainPosts__right">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <ul>
-            <li>
-              <span class="glyphicon glyphicon-calendar"></span>
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            </li>
-            <li>
-              <span class="glyphicon glyphicon-user"></span>
-              <span>Author</span>
-              <span><?php the_author_posts_link(); ?></span>
-            </li>
-          </ul>
-          <ul class="mainPosts__categories">
-            <li>
-              <span class="glyphicon glyphicon-bookmark"></span>
-            </li>
-            <li><?php the_category(" "); ?></li>
-          </ul>
-          <a class="readmore" href="<?php the_permalink(); ?>">Read More.</a>
-        </div>
+        <a class="mainPosts__wraplink" href="<?php the_permalink(); ?>">
+          <div class="mainPosts__left">
+            <?php the_post_thumbnail(); ?>
+          </div>
+          <div class="mainPosts__right">
+            <h2><?php the_title(); ?></h2>
+            <ul>
+              <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
+              </li>
+            </ul>
+            <div class="mainPosts__socialCount">
+              <span class="mainPosts__socialCount__twitter"><i class="fa fa-twitter"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span>
+              <span class="mainPosts__socialCount__facebook"><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <?PHP
@@ -99,30 +93,24 @@
           while (have_posts()) : the_post();
       ?>
       <article class="mainPosts__list">
-        <div class="mainPosts__left">
-          <?php the_post_thumbnail(); ?>
-        </div>
-        <div class="mainPosts__right">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <ul>
-            <li>
-              <span class="glyphicon glyphicon-calendar"></span>
-              <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
-            </li>
-            <li>
-              <span class="glyphicon glyphicon-user"></span>
-              <span>Author</span>
-              <span><?php the_author_posts_link(); ?></span>
-            </li>
-          </ul>
-          <ul class="mainPosts__categories">
-            <li>
-              <span class="glyphicon glyphicon-bookmark"></span>
-            </li>
-            <li><?php the_category(" "); ?></li>
-          </ul>
-          <a class="readmore" href="<?php the_permalink(); ?>">Read More.</a>
-        </div>
+        <a class="mainPosts__wraplink" href="<?php the_permalink(); ?>">
+          <div class="mainPosts__left">
+            <?php the_post_thumbnail(); ?>
+          </div>
+          <div class="mainPosts__right">
+            <h2><?php the_title(); ?></h2>
+            <ul>
+              <li>
+                <span class="glyphicon glyphicon-calendar"></span>
+                <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
+              </li>
+            </ul>
+            <div class="mainPosts__socialCount">
+              <span class="mainPosts__socialCount__twitter"><i class="fa fa-twitter"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span>
+              <span class="mainPosts__socialCount__facebook"><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span>
+            </div>
+          </div>
+        </a>
       </article>
 
       <?PHP
