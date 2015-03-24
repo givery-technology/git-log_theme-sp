@@ -1,0 +1,19 @@
+# Mac OS X
+.DS_Store
+
+# npm
+node_modules
+
+# HTML
+*.html
+
+# Sass
+.sass-cache
+
+# bourbon/neat
+sass/bourbon
+sass/neat
+
+# Compile File
+style.css
+script
