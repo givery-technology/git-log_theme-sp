@@ -472,9 +472,17 @@ header{
     border: solid 5px $mainColor;
     border-radius:50%;
     overflow: hidden;
+    @media screen and (min-width: 414px) {
+      width: 125px;
+      height: 125px;
+    }
     img{
       width: 110px;
       height: auto;
+      @media screen and (min-width: 414px) {
+        width: 120px;
+        height: auto;
+      }
     }
   }
   &__authorName{
