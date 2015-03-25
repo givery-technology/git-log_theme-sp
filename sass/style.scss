@@ -455,8 +455,7 @@ header{
   }
   &__author{
     display: inline-block;
-    width: 80%;
-    height: 110px;
+    height: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 80px;
@@ -464,35 +463,44 @@ header{
   }
   &__authorIcon{
     box-sizing: border-box;
-    width: 150px;
-    height: 150px;
+    width: 115px;
+    height: 115px;
     margin: 20px auto;
     position: absolute;
     margin-left: -80px;
-    margin-top: -20px;
+    margin-top: -10px;
     border: solid 5px $mainColor;
     border-radius:50%;
     overflow: hidden;
+    @media screen and (min-width: 414px) {
+      width: 125px;
+      height: 125px;
+    }
     img{
-      width: 140px;
+      width: 110px;
       height: auto;
+      @media screen and (min-width: 414px) {
+        width: 120px;
+        height: auto;
+      }
     }
   }
   &__authorName{
-    margin-left: 110px;
+    margin-left: 50px;
     font-size: $textSizeL;
     color: $white;
     margin-top: 10px;
   }
   &__authorPosition{
-    margin-left: 110px;
+    margin-left: 50px;
     margin-top: 10px;
     color: $white;
   }
   &__authorInfo{
     line-height: 130%;
-    margin-left: 110px;
-    margin-top: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: $textSize;
     color: $white;
   }
 
